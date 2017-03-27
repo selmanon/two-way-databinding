@@ -14,7 +14,6 @@ import com.squareup.picasso.Target;
 
 public class MainActivity extends AppCompatActivity {
   private User user;
-  private static Target target;
 
 
   @Override
@@ -35,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
       imageView.setImageDrawable(null);
     } else {
       Picasso.with(DataBindingSampleApplication.getAppContext()).load(url)
-          .into(target = new Target() {
+          .into(new Target() {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
               imageView.setImageBitmap(bitmap);
