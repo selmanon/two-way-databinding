@@ -9,9 +9,11 @@ import android.databinding.ObservableField;
 public class User {
   public final ObservableField<String> firstName;
   public final ObservableField<String> lastName;
+  public final ObservableField<String> profilePicture;
 
-  public User(String firstName, String lastName) {
+  public User(String firstName, String lastName,String profilePicture) {
     this.firstName = new ObservableField<>(firstName);
     this.lastName = new ObservableField<>(lastName);
+    this.profilePicture = new ObservableField<>(profilePicture);
   }
 }
